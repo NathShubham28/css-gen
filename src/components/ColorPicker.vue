@@ -1,6 +1,6 @@
 <template>
   <div class="color-picker">
-    <label for="color">Color: </label>
+    <label>Color: </label>
     <chrome v-model="colors" @change-color="onChange"></chrome>
   </div>
 </template>
@@ -10,26 +10,14 @@ import { Chrome } from 'vue-color'
 
 export default {
   name: 'color-piker',
-  props: ['cssColor'],
   data () {
     return {
       colors: {
-        hex: '#194d33',
-        hsl: {
-          s: 0.5,
-          l: 0.2,
-          a: 1
-        },
-        hsv: {
-          h: 150,
-          s: 0.66,
-          v: 0.30,
-          a: 1
-        },
+        hex: '#e91e63',
         rgba: {
-          r: 25,
-          g: 77,
-          b: 51,
+          r: 233,
+          g: 30,
+          b: 99,
           a: 1
         },
         a: 1

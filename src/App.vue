@@ -34,3 +34,9 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.md-input-container input[type=range] {
+  flex-basis: 50%;
+}
+</style>

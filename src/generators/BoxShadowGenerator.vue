@@ -13,21 +13,25 @@
         <md-input-container>
           <label>Offset X: </label>
           <md-input type="number" v-model="offsetX"></md-input>
+          <md-input type="range" v-model="offsetX" min="-75" max="75" class="input-range"></md-input>
         </md-input-container>
 
         <md-input-container>
           <label>Offset Y: </label>
           <md-input type="number" v-model="offsetY"></md-input>
+          <md-input type="range" v-model="offsetY" min="-75" max="75" class="input-range"></md-input>
         </md-input-container>
 
         <md-input-container>
           <label>Blur Radius: </label>
           <md-input type="number" v-model="blurRadius"></md-input>
+          <md-input type="range" v-model="blurRadius" min="0" max="30" class="input-range"></md-input>
         </md-input-container>
 
         <md-input-container>
           <label>Spread Radius: </label>
           <md-input type="number" v-model="spreadRadius"></md-input>
+          <md-input type="range" v-model="spreadRadius" min="-50" max="50" class="input-range"></md-input>
         </md-input-container>
 
         <color-picker @colorPikerChange="onColorPickerChange"></color-picker>
@@ -78,7 +82,7 @@ export default {
   padding: 40px;
 
   &__box {
-    width: 200px;
+    width: 100px;
     height: 100px;
     background-color: #3f51b5;
   }
