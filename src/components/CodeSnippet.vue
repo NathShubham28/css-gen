@@ -1,7 +1,7 @@
 <template>
   <div class="snippet">
-    <pre class="snippet__pre">
-      <code class="snippet__code">{{ snippet }}</code>
+    <pre>
+      <code>{{ snippet }}</code>
     </pre>
     <md-button class="md-raised md-primary" @click.native="copySnippetToClipboard">Copy To Clipboard</md-button>
   </div>
@@ -24,7 +24,23 @@ export default {
 
 <style lang="scss">
 .snippet {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
   margin: 0 auto;
+
+  pre {
+    display: flex;
+    width: 100%;
+    padding: 0;
+    margin: 0 0 30px;
+  }
+
+  code {
+    margin: 0;
+    padding: 30px 20px;
+    width: 100%;
+  }
 }
 </style>
