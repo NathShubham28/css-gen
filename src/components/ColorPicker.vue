@@ -1,6 +1,6 @@
 <template>
   <div class="color-picker">
-    <label>Color: </label>
+    <label class="color-picker-label">Color: </label>
     <chrome v-model="colors" @change-color="onChange"></chrome>
   </div>
 </template>
@@ -43,3 +43,10 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.color-picker-label {
+  font-size: 12px;
+  color: rgba(0, 0, 0, .54);
+}
+</style>

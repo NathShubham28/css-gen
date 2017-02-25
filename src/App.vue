@@ -24,6 +24,7 @@ import Vue from 'vue'
 import VueMaterial from 'vue-material'
 import 'vue-material/dist/vue-material.css'
 import BoxShadowGenerator from './generators/BoxShadowGenerator'
+import './styles/input-range.scss'
 
 Vue.use(VueMaterial)
 
