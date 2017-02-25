@@ -3,7 +3,7 @@
     <md-layout md-gutter>
       <md-layout md-flex="65" md-column>
         <div class="view">
-          <div class="view__box" :style="formattCssCodeSnippet"></div>
+          <div class="view-box" :style="formattCssCodeSnippet"></div>
         </div>
         <code-snippet :snippet="formattCssCodeSnippet"></code-snippet>
       </md-layout>
@@ -80,11 +80,11 @@ export default {
   align-items: center;
   height: 360px;
   padding: 40px;
+}
 
-  &__box {
-    width: 100px;
-    height: 100px;
-    background-color: #3f51b5;
-  }
+.view-box{
+  width: 100px;
+  height: 100px;
+  background-color: #3f51b5;
 }
 </style>
