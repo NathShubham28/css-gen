@@ -9,11 +9,7 @@
       </md-tab>
 
       <md-tab id="text-shadow" md-label="Text Shadow">
-
-      </md-tab>
-
-      <md-tab id="triangle" md-label="Triangle">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt dolorum quas.</p>
+        <text-shadow-generator></text-shadow-generator>
       </md-tab>
     </md-tabs>
   </div>
@@ -24,6 +20,7 @@ import Vue from 'vue'
 import VueMaterial from 'vue-material'
 import 'vue-material/dist/vue-material.css'
 import BoxShadowGenerator from './generators/BoxShadowGenerator'
+import TextShadowGenerator from './generators/TextShadowGenerator'
 import './styles/input-range.scss'
 
 Vue.use(VueMaterial)
@@ -31,7 +28,8 @@ Vue.use(VueMaterial)
 export default {
   name: 'app',
   components: {
-    BoxShadowGenerator
+    BoxShadowGenerator,
+    TextShadowGenerator
   }
 }
 </script>

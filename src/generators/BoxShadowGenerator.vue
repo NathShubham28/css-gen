@@ -53,7 +53,7 @@ export default {
       offsetY: 5,
       blurRadius: 5,
       spreadRadius: 0,
-      backgroundColorCssValue: null
+      backgroundColor: null
     }
   },
   components: {
@@ -62,12 +62,13 @@ export default {
   },
   computed: {
     formattCssCodeSnippet () {
-      return `box-shadow: ${this.inset ? 'inset ' : ''}${this.offsetX}px ${this.offsetY}px ${this.blurRadius}px ${this.spreadRadius}px ${this.backgroundColorCssValue};`
+      const { inset, offsetX, offsetY, blurRadius, spreadRadius, backgroundColor } = this
+      return `box-shadow: ${inset ? 'inset ' : ''}${offsetX}px ${offsetY}px ${blurRadius}px ${spreadRadius}px ${backgroundColor};`
     }
   },
   methods: {
     onColorPickerChange (val) {
-      this.backgroundColorCssValue = val
+      this.backgroundColor = val
     }
   }
 }
