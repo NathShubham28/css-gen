@@ -29,6 +29,7 @@ export default {
   align-items: center;
   width: 80%;
   margin: 0 auto;
+  overflow: auto;
 
   pre {
     display: flex;
