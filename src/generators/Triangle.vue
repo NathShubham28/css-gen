@@ -63,22 +63,22 @@
 
         switch (this.direction) {
           case 'top':
-            borderWidth = `border-width: 0 ${width}px ${width}px ${width}px;`
+            borderWidth = `border-width: 0 ${width}px ${height}px ${width}px;`
             borderColor = `border-color: transparent transparent ${color} transparent;`
             break
 
           case 'right':
-            borderWidth = `border-width: ${width}px 0 ${width}px ${width}px;`
+            borderWidth = `border-width: ${width}px 0 ${width}px ${height}px;`
             borderColor = `border-color: transparent transparent transparent ${color};`
             break
 
           case 'bottom':
-            borderWidth = `border-width: ${width}px ${width}px 0 ${width}px;`
+            borderWidth = `border-width: ${height}px ${width}px 0 ${width}px;`
             borderColor = `border-color: ${color} transparent transparent transparent;`
             break
 
           case 'left':
-            borderWidth = `border-width: ${width}px ${width}px ${width}px 0;`
+            borderWidth = `border-width: ${width}px ${height}px ${width}px 0;`
             borderColor = `border-color: transparent ${color} transparent transparent;`
             break
 

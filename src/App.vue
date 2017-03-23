@@ -5,15 +5,19 @@
     </md-toolbar>
     <md-tabs>
       <md-tab id="box-shadow" md-label="Box Shadow">
-        <box-shadow-generator></box-shadow-generator>
+        <box-shadow></box-shadow>
       </md-tab>
 
       <md-tab id="text-shadow" md-label="Text Shadow">
-        <text-shadow-generator></text-shadow-generator>
+        <text-shadow></text-shadow>
       </md-tab>
 
       <md-tab id="triangle" md-label="Triangle">
-        <triangle-generator></triangle-generator>
+        <triangle></triangle>
+      </md-tab>
+
+      <md-tab id="border-radius" md-label="Border Radius">
+        <border-radius></border-radius>
       </md-tab>
     </md-tabs>
   </div>
@@ -24,18 +28,20 @@ import Vue from 'vue'
 import VueMaterial from 'vue-material'
 import 'vue-material/dist/vue-material.css'
 import './styles/input-range.scss'
-import BoxShadowGenerator from './generators/BoxShadowGenerator'
-import TextShadowGenerator from './generators/TextShadowGenerator'
-import TriangleGenerator from './generators/TriangleGenerator'
+import BoxShadow from './generators/BoxShadow'
+import TextShadow from './generators/TextShadow'
+import Triangle from './generators/Triangle'
+import BorderRadius from './generators/BorderRadius'
 
 Vue.use(VueMaterial)
 
 export default {
   name: 'app',
   components: {
-    BoxShadowGenerator,
-    TextShadowGenerator,
-    TriangleGenerator
+    BoxShadow,
+    TextShadow,
+    Triangle,
+    BorderRadius
   }
 }
 </script>
