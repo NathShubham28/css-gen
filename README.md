@@ -15,4 +15,4 @@ npm run dev
 npm run build
 ```
 
-[Look live](https://kuzarth.github.io/ccs-gen/dist/)
+[Look live](https://kuzarth.github.io/css-gen/dist/)
