@@ -5,15 +5,15 @@
     </md-toolbar>
     <md-tabs>
       <md-tab id="box-shadow" md-label="Box Shadow">
-        <box-shadow-generator></box-shadow-generator>
+        <box-shadow-generator />
       </md-tab>
 
       <md-tab id="text-shadow" md-label="Text Shadow">
-        <text-shadow-generator></text-shadow-generator>
+        <text-shadow-generator />
       </md-tab>
 
       <md-tab id="triangle" md-label="Triangle">
-        <triangle-generator></triangle-generator>
+        <triangle-generator />
       </md-tab>
     </md-tabs>
   </div>
@@ -39,3 +39,4 @@ export default {
   }
 }
 </script>
+
