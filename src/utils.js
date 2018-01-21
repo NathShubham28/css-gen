@@ -1,8 +1,8 @@
 export function copyToClipboard (text) {
-  const input = document.createElement('input')
-  input.value = text
-  document.body.append(input)
-  input.select()
+  const textArea = document.createElement('textarea')
+  textArea.value = text
+  document.body.append(textArea)
+  textArea.select()
   document.execCommand('Copy')
-  input.remove()
+  textArea.remove()
 }
