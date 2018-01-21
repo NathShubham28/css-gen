@@ -2,38 +2,40 @@
   <md-layout md-gutter>
     <md-layout md-flex="65" md-column>
       <div class="view">
-        <p class="view-text" :style="formattCssCodeSnippet">Border Radius</p>
+        <p class="view-text" :style="formatCssCodeSnippet">Text Shadow</p>
       </div>
-      <code-snippet :snippet="formattCssCodeSnippet"></code-snippet>
+      <code-snippet :snippet="formatCssCodeSnippet" />
     </md-layout>
     <md-layout md-flex="35">
         <md-input-container>
           <label>Offset X: </label>
-          <md-input type="number" v-model="offsetX"></md-input>
-          <md-input type="range" v-model="offsetX" min="-75" max="75" class="input-range"></md-input>
+          <md-input type="number" v-model="offsetX" />
+          <md-input type="range" v-model="offsetX" min="-75" max="75" class="input-range" />
         </md-input-container>
 
         <md-input-container>
           <label>Offset Y: </label>
-          <md-input type="number" v-model="offsetY"></md-input>
-          <md-input type="range" v-model="offsetY" min="-75" max="75" class="input-range"></md-input>
+          <md-input type="number" v-model="offsetY" />
+          <md-input type="range" v-model="offsetY" min="-75" max="75" class="input-range" />
         </md-input-container>
 
         <md-input-container>
           <label>Blur Radius: </label>
-          <md-input type="number" v-model="blurRadius"></md-input>
-          <md-input type="range" v-model="blurRadius" min="0" max="30" class="input-range"></md-input>
+          <md-input type="number" v-model="blurRadius" />
+          <md-input type="range" v-model="blurRadius" min="0" max="30" class="input-range" />
         </md-input-container>
 
+        <color-picker @colorPikerChange="onColorPickerChange" />
       </md-layout>
   </md-layout>
 </template>
 
 <script>
+  import ColorPicker from '../components/ColorPicker'
   import CodeSnippet from '../components/CodeSnippet'
 
   export default {
-    name: 'border-radius-generator',
+    name: 'text-shadow-generator',
     data () {
       return {
         offsetX: 2,
@@ -43,10 +45,11 @@
       }
     },
     components: {
+      ColorPicker,
       CodeSnippet
     },
     computed: {
-      formattCssCodeSnippet () {
+      formatCssCodeSnippet () {
         const { offsetX, offsetY, blurRadius, color } = this
         return `text-shadow: ${offsetX}px ${offsetY}px ${blurRadius}px ${color};`
       }
